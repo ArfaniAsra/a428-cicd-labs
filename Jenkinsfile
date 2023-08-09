@@ -4,7 +4,7 @@ node {
     def container
 
     try {
-        container = docker.image(dockerImage).inside('-p 3000:3000') {
+        container = docker.image(dockerImage).withRun('-p 3000:3000') {
             stage('Build') {
                 sh 'apt-get update -y && apt-get install -y npm'
                 sh 'npm install'
@@ -19,6 +19,7 @@ node {
         }
     }
 }
+
 
 
 
