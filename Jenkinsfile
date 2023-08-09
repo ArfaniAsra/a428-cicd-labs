@@ -10,9 +10,6 @@ node {
     }
 }
 
-
-
-
 // Declarative Pipeline
 // pipeline {
 //     agent {
